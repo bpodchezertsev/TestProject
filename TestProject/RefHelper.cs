@@ -4,7 +4,7 @@ using System.Reflection;
 namespace TestProject;
 
 /// <summary>
-/// Experiments with recursive reversed array filling and stackalloc
+/// Tests with recursive reversed array filling, stackalloc, span, or just a single allocation.
 /// </summary>
 
 public static class RefHelper
@@ -92,9 +92,9 @@ public static class RefHelper
     {
         return false
                || type.IsAssignableTo(typeof(ValueType))
-               || type.IsAssignableTo(typeof(IImmutableList<>))
-               || type.IsAssignableTo(typeof(IImmutableSet<>))
-               || type.IsAssignableTo(typeof(IImmutableDictionary<,>))
+               //|| type.IsAssignableTo(typeof(IImmutableList<>))
+               //|| type.IsAssignableTo(typeof(IImmutableSet<>))
+               //|| type.IsAssignableTo(typeof(IImmutableDictionary<,>))
             ;
     }
 
